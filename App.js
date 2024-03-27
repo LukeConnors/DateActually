@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, SafeAreaView, Image } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, Image, TouchableWithoutFeedback } from 'react-native';
 
 export default function App() {
   console.log("Hello world! Success!");
@@ -13,11 +13,16 @@ export default function App() {
      {/* <Image source={require('./assets/icon.png')} /> */}
      {/* Network images require specified dimensions to be visible,
       while local images do not. */}
-      <Image source={{
+      <TouchableWithoutFeedback onLongPress={() => console.log("image held")} onPress={() => console.log("image tapped")}>
+      <Image 
+      blurRadius={2}
+      fadeDuration={2}
+      source={{
         width: 200,
         height: 300,
         uri: "https://picsum.photos/200/300"}
         } />
+      </TouchableWithoutFeedback>
       <StatusBar style="auto" />
     </SafeAreaView>
   );
