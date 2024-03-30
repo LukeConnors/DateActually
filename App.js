@@ -1,5 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, SafeAreaView, TouchableOpacity, Image, TouchableWithoutFeedback, TouchableHighlight } from 'react-native';
+import { 
+  StyleSheet, 
+  Text, View, 
+  SafeAreaView, TouchableOpacity, 
+  Image, TouchableWithoutFeedback, 
+  TouchableHighlight,
+  Button,
+  Alert,
+  TouchableNativeFeedback
+} from 'react-native';
 
 export default function App() {
   console.log("Hello world! Success!");
@@ -23,7 +32,19 @@ export default function App() {
         uri: "https://picsum.photos/200/300"}
         } />
       </TouchableOpacity>
+      {/* It appears native feedback creates 
+      an echo effect that is seen a lot on Android */}
+      <TouchableNativeFeedback>
+      <View style={{width: 200, height: 70, backgroundColor: "red"}}></View>
+      </TouchableNativeFeedback>
       <StatusBar style="auto" />
+      <Button title="Clicky click"
+       onPress={() => Alert.alert("My Title:", "My Message", [
+        {text: "Yes", onPress: () => console.log("USER CLICKED YES")},
+        {text: "No", onPress: () => console.log("USER CLICKED NO")}
+      ])}
+       color={"black"}
+       />
     </SafeAreaView>
   );
 }
