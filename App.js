@@ -41,7 +41,7 @@ export default function App() {
       <Button title="Clicky click"
        onPress={() => Alert.alert("My Title:", "My Message", [
         {text: "Yes", onPress: () => console.log("USER CLICKED YES")},
-        {text: "No", onPress: () => console.log("USER CLICKED NO i swear")}
+        {text: "No", onPress: () => console.log("USER CLICKED NO")}
       ])}
        color={"green"}
        />
