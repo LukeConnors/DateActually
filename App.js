@@ -43,7 +43,7 @@ export default function App() {
         {text: "Yes", onPress: () => console.log("USER CLICKED YES")},
         {text: "No", onPress: () => console.log("USER CLICKED NO")}
       ])}
-       color={"black"}
+       color={"green"}
        />
     </SafeAreaView>
   );
