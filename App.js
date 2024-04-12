@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
 import { 
   StyleSheet, 
   Text, View, 
@@ -6,6 +5,8 @@ import {
   Image, TouchableWithoutFeedback, 
   TouchableHighlight,
   Button,
+  StatusBar,
+  Platform,
   Alert,
   TouchableNativeFeedback
 } from 'react-native';
@@ -16,6 +17,7 @@ export default function App() {
   const handlePress = () => console.log("Text clicked!");
 
   return (
+    // SafeAreaView is iOS only. Padding must be added manually to Android.
     <SafeAreaView style={styles.container}>
       <Text numberOfLines={3} onPress={handlePress} style={styles.title}>DATE ACTUALLY - we can say a lot of things because we want to test the number of lines truncation feature on the text element.</Text>
      {/* require  returns reference number to image */}
@@ -58,12 +60,14 @@ export default function App() {
 
 const containerStyle = { backgroundColor: "orange"}
 
+// StyleSheet.create validates correct key-values, if this isn't used errors will not be thrown in the case of typos
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
   title: {
     backgroundColor: 'red',
