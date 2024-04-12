@@ -48,12 +48,15 @@ export default function App() {
        <Button 
        title='Click MEEEEE'
        onPress={() => 
+        // Alert.prompt only works on iOS and not Android.
       Alert.prompt("my title", "my message", text => console.log(text))
       }
        />
     </SafeAreaView>
   );
 }
+
+const containerStyle = { backgroundColor: "orange"}
 
 const styles = StyleSheet.create({
   container: {
