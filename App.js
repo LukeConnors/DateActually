@@ -45,6 +45,12 @@ export default function App() {
       ])}
        color={"green"}
        />
+       <Button 
+       title='Click MEEEEE'
+       onPress={() => 
+      Alert.prompt("my title", "my message", text => console.log(text))
+      }
+       />
     </SafeAreaView>
   );
 }
