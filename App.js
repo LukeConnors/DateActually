@@ -11,10 +11,10 @@ import {
   TouchableNativeFeedback,
   Dimensions
 } from 'react-native';
+import {useDimensions} from '@react-native-community/hooks'
 
 export default function App() {
-  console.log("Hello world! Success!");
-  console.log(Dimensions.get('screen'))
+  console.log(useDimensions)
 
   const handlePress = () => console.log("Text clicked!");
 
