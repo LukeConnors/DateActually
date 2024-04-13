@@ -8,53 +8,26 @@ import {
   StatusBar,
   Platform,
   Alert,
-  TouchableNativeFeedback
+  TouchableNativeFeedback,
+  Dimensions
 } from 'react-native';
 
 export default function App() {
   console.log("Hello world! Success!");
+  console.log(Dimensions.get('screen'))
 
   const handlePress = () => console.log("Text clicked!");
 
   return (
-    // SafeAreaView is iOS only. Padding must be added manually to Android.
-    <SafeAreaView style={styles.container}>
-      <Text numberOfLines={3} onPress={handlePress} style={styles.title}>DATE ACTUALLY - we can say a lot of things because we want to test the number of lines truncation feature on the text element.</Text>
-     {/* require  returns reference number to image */}
-     {/* <Image source={require('./assets/icon.png')} /> */}
-     {/* Network images require specified dimensions to be visible,
-      while local images do not. */}
-      <TouchableOpacity onLongPress={() => console.log("image held")} onPress={() => console.log("image tapped")}>
-      <Image 
-      blurRadius={2}
-      fadeDuration={2}
-      source={{
-        width: 200,
-        height: 300,
-        uri: "https://picsum.photos/200/300"}
-        } />
-      </TouchableOpacity>
-      {/* It appears native feedback creates 
-      an echo effect that is seen a lot on Android */}
-      <TouchableNativeFeedback>
-      <View style={{width: 200, height: 70, backgroundColor: "red"}}></View>
-      </TouchableNativeFeedback>
-      <StatusBar style="auto" />
-      <Button title="Clicky click"
-       onPress={() => Alert.alert("My Title:", "My Message", [
-        {text: "Yes", onPress: () => console.log("USER CLICKED YES")},
-        {text: "No", onPress: () => console.log("USER CLICKED NO")}
-      ])}
-       color={"green"}
-       />
-       <Button 
-       title='Click MEEEEE'
-       onPress={() => 
-        // Alert.prompt only works on iOS and not Android.
-      Alert.prompt("my title", "my message", text => console.log(text))
-      }
-       />
-    </SafeAreaView>
+    <View
+    style={{
+      backgroundColor: "red",
+      width: "100%",
+      height: "30%",
+    }}
+    >
+
+    </View>
   );
 }
 
