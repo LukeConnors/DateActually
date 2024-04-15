@@ -14,8 +14,16 @@ import {
 import {useDimensions, useDeviceOrientation} from '@react-native-community/hooks'
 
 export default function App() {
+  console.log("hello world!")
+  const orientation = useDeviceOrientation();
   console.log(useDeviceOrientation())
-  const {landscape} = useDeviceOrientation();
+  const deviceDirection = () => {
+    if(orientation === "landscape"){
+      return "100%"
+    } else {
+      return "30%"
+    }
+  }
 
   const handlePress = () => console.log("Text clicked!");
 
@@ -24,10 +32,12 @@ export default function App() {
     style={{
       backgroundColor: "red",
       width: "100%",
-      height: landscape ? "100%" : "30%",
+      height: deviceDirection(),
     }}
     >
-
+      <Button 
+      title='text'
+      />
     </View>
   );
 }
