@@ -15,18 +15,29 @@ import {useDimensions, useDeviceOrientation} from '@react-native-community/hooks
 
 export default function App() {
  return(
-  <>
+  <View style={{
+    backgroundColor: "white",
+    flex: 1,
+    flexDirection: "row"
+  }}>
  <View style={{
   backgroundColor: "red",
-  flex: 0.5,
+  width: 100,
+  height: 100,
  }}>
  </View>
 <View style={{
   backgroundColor: "dodgerblue",
-  flex: 0.5
+  width: 100,
+  height: 100,
 }}>
-
 </View>
-  </>
+<View style={{
+  backgroundColor: "green",
+  width: 100,
+  height: 100,
+}}>
+</View>
+  </View>
  )
 };
