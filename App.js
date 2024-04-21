@@ -20,12 +20,13 @@ export default function App() {
     flex: 1,
     flexDirection: "row",
     justifyContent: "center",
-    alignItems: "stretch"
+    alignItems: "center",
   }}>
  <View style={{
   backgroundColor: "red",
   width: 100,
   height: 300,
+  alignSelf: "flex-start"
  }}>
  </View>
 <View style={{
