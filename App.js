@@ -19,7 +19,7 @@ export default function App() {
     backgroundColor: "white",
     flex: 1,
     flexDirection: "row",
-    justifyContent: "center"
+    justifyContent: "space-evenly"
   }}>
  <View style={{
   backgroundColor: "red",
