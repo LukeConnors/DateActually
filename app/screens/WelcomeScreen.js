@@ -8,7 +8,12 @@ function WelcomeScreen(props) {
         source={require('../assets/romance.jpg')}
 
         >
+            <View>
+            </View>
             <View style={styles.loginButton}>
+
+            </View>
+            <View style={styles.registerButton}>
 
             </View>
         </ImageBackground>
@@ -25,6 +30,12 @@ loginButton: {
     width: "100%",
     height: 70,
     backgroundColor: "red",
+},
+
+registerButton: {
+    width: "100%",
+    height: 70,
+    backgroundColor: "green",
 }
 })
 
