@@ -1,11 +1,11 @@
 import React from 'react';
-import { ImageBackground, StyleSheet } from 'react-native-web';
+import { ImageBackground, StyleSheet } from 'react-native';
 
 function WelcomeScreen(props) {
     return (
         <ImageBackground 
         style = {styles.background}
-        source={require('./assets/romance.jpg')}
+        source={require('../assets/romance.jpg')}
         ></ImageBackground>
     );
 
