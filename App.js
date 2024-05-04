@@ -12,42 +12,10 @@ import {
   Dimensions
 } from 'react-native';
 import {useDimensions, useDeviceOrientation} from '@react-native-community/hooks'
+import WelcomeScreen from './app/screens/WelcomeScreen';
 
 export default function App() {
  return(
-  <View style={{
-    backgroundColor: "white",
-    flex: 1,
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center", // determines alignment of items in each line.
-    alignContent: "center", //used for total content within view (only affects content with wrapping)
-    flexWrap: "wrap"
-  }}>
- <View style={{
-  backgroundColor: "black",
-  flexBasis: 100, //flex basis can set width or height
-  flex: -1,
-  width: 400,
-  height: 100,
- }}>
- </View>
-<View style={{
-  backgroundColor: "dodgerblue",
-  width: 100,
-  height: 100,
-  right: 20,
-  top: 20, 
-  position: "absolute",
-}}>
-</View>
-<View style={{
-  backgroundColor: "green",
-  width: 100,
-  height: 100,
-  top: 20,
-}}>
-</View>
-  </View>
+ <WelcomeScreen />
  )
 };
